@@ -1,4 +1,4 @@
-### Please find the screenshots of Both Tables below
+### Screenshots of Both Tables are provided below
 
 ![image](https://github.com/Rishk3/data_process/assets/47039153/0b53f0a9-a29e-4285-9c5d-6796ddcdbfd9)
 
