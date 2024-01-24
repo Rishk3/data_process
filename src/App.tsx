@@ -7,17 +7,14 @@ const FlavanoidsStatsTable: React.FC<FlavanoidsStatsTableProps> = ({
 }) => {
   const flavanoidsData = calculateClassData(wineData, "flavanoid");
   const gammaData = calculateClassData(wineData, "gamma");
-
-  console.log("flavanoidsData=", flavanoidsData);
-  console.log("gammaData=", gammaData);
   return (
     <div className="App">
       <div>
-        <h2>Flavanoids Table</h2>
-        <TableRender data={flavanoidsData} tableType="Flavanoids" />
+        <h2>Flavanoids Table-a</h2>
+        <TableRender calculatedData={flavanoidsData} type="Flavanoids" />
 
-        <h2>Gamma Table</h2>
-        <TableRender data={gammaData} tableType="Gamma" />
+        <h2>Gamma Table-b</h2>
+        <TableRender calculatedData={gammaData} type="Gamma" />
       </div>
     </div>
   );

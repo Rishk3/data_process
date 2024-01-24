@@ -2,41 +2,41 @@ import React from "react";
 import "./App.css";
 
 interface Props {
-  data: {
+  calculatedData: {
     class: string;
     mean: number;
     median: number;
     mode: number;
   }[];
-  tableType: string;
+  type: string;
 }
-const TableRender = ({ data, tableType }: Props) => {
+const TableRender = ({ calculatedData, type }: Props) => {
   return (
     <table style={{ borderCollapse: "collapse", width: "100%" }}>
       <thead>
         <tr style={{ backgroundColor: "#eee" }}>
           <th>Measure</th>
-          {data.map(({ class: alcoholClass }) => (
+          {calculatedData.map(({ class: alcoholClass }) => (
             <th key={alcoholClass}>{`Class ${alcoholClass}`}</th>
           ))}
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{`${tableType} Mean`}</td>
-          {data.map(({ mean }) => (
+          <td>{`${type} Mean`}</td>
+          {calculatedData.map(({ mean }) => (
             <td key={mean}>{mean.toFixed(3)}</td>
           ))}
         </tr>
         <tr>
-          <td>{`${tableType} Median`}</td>
-          {data.map(({ median }) => (
+          <td>{`${type} Median`}</td>
+          {calculatedData.map(({ median }) => (
             <td key={median}>{median.toFixed(3)}</td>
           ))}
         </tr>
         <tr>
-          <td>{`${tableType} Mode`}</td>
-          {data.map(({ mode }) => (
+          <td>{`${type} Mode`}</td>
+          {calculatedData.map(({ mode }) => (
             <td key={mode}>{mode.toFixed(3)}</td>
           ))}
         </tr>
